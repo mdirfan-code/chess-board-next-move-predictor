@@ -27,39 +27,38 @@ A computer vision and machine learning application that detects chess board posi
 
 ```
 .
-├── application/
-│   ├── find_ip.py
-│   ├── web app/
-│   │   ├── main.py                 # FastAPI application
-│   │   ├── templates/
-│   │   │   └── index.html          # Web UI
-│   │   ├── util_functions/
-│   │   │   ├── chess_board_detection.py
-│   │   │   ├── chess_peice_classifier.py
-│   │   │   ├── chess_solver.py
-│   │   │   ├── disect_chessboard.py
-│   │   │   └── image_processing.py
-│   │   └── testing.ipynb
-│   └── __init__.py
+├── __init__.py
+├── code.ipynb
+├── README.md
 ├── chess_solving algorithm/
 │   └── chess_algorithm.py
-├── machine learning/
-│   ├── chess_piece_classification_model.h5
-│   ├── chess_piece_classifier.h5
-│   ├── model.ipynb
-│   └── data_agumentation.ipynb
 ├── data/
 │   ├── board pics/
-│   └── pieces/                     # Piece images for training
+│   └── peices/                     # Chess piece images for training
 │       ├── bishop/
 │       ├── king/
 │       ├── knight/
 │       ├── pawn/
 │       ├── queen/
 │       └── rook/
+├── machine learning/
+│   ├── chess_piece_classification_model.h5
+│   ├── chess_piece_classifier.h5
+│   └── data_agumentation_and_model_training.ipynb
 ├── Result/                         # Solution results
-├── code.ipynb
-└── README.md
+└── web app/
+    ├── __init__.py
+    ├── main.py                     # FastAPI application
+    ├── testing.ipynb
+    ├── templates/
+    │   └── index.html              # Web UI
+    └── util_functions/
+        ├── __init__.py
+        ├── chess_board_detection.py
+        ├── chess_peice_classifier.py
+        ├── chess_solver.py
+        ├── disect_chessboard.py
+        └── image_processing.py
 ```
 
 ## 🚀 Quick Start
@@ -86,7 +85,7 @@ pip install -r requirements.txt
 
 3. Navigate to the web app directory:
 ```bash
-cd application/web\ app
+cd web\ app
 ```
 
 4. Run the application:
@@ -94,7 +93,7 @@ cd application/web\ app
 uvicorn main:app --reload
 ```
 
-The web interface will be available at `http://localhost:8000/template`
+The web interface will be available at `http://localhost:8000`
 
 ## 🧠 How It Works
 
